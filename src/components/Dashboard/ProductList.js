@@ -23,7 +23,7 @@ function ProductList() {
           },
         };
 
-        const response = await axios.get('http://localhost:5000/api/products', config);
+        const response = await axios.get('https://capstone-backend-1jax.onrender.com/api/products', config);
         setProducts(response.data);
 
       } catch (error) {
@@ -50,7 +50,7 @@ function ProductList() {
         },
       };
 
-      await axios.delete(`http://localhost:5000/api/products/${id}`, config);
+      await axios.delete(`https://capstone-backend-1jax.onrender.com/api/products/${id}`, config);
       setProducts(products.filter(product => product._id !== id));
 
     } catch (error) {

@@ -28,7 +28,7 @@ function EditVendor() {
           },
         };
 
-        const response = await axios.get(`http://localhost:5000/api/vendors/${id}`, config);
+        const response = await axios.get(`https://capstone-backend-1jax.onrender.com/api/vendors/${id}`, config);
         const vendor = response.data;
 
         setName(vendor.name);
@@ -63,7 +63,7 @@ function EditVendor() {
       };
 
       const vendorData = { name, contactNumber, email, address };
-      await axios.put(`http://localhost:5000/api/vendors/${id}`, vendorData, config);
+      await axios.put(`https://capstone-backend-1jax.onrender.com/api/vendors/${id}`, vendorData, config);
 
       console.log('Vendor updated successfully.');
       navigate('/dashboard/vendors');

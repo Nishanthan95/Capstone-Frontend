@@ -28,7 +28,7 @@ function CreateStock() {
       };
 
       const stockData = { name, description, quantity };
-      const response = await axios.post('http://localhost:5000/api/stocks', stockData, config);
+      const response = await axios.post('https://capstone-backend-1jax.onrender.com/api/stocks', stockData, config);
 
       console.log('Stock created:', response.data);
       navigate('/dashboard/stocks');

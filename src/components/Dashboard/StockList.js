@@ -23,7 +23,7 @@ function StockList() {
           },
         };
 
-        const response = await axios.get('http://localhost:5000/api/stocks', config);
+        const response = await axios.get('https://capstone-backend-1jax.onrender.com/api/stocks', config);
         setStocks(response.data);
 
       } catch (error) {
@@ -50,7 +50,7 @@ function StockList() {
         },
       };
 
-      await axios.delete(`http://localhost:5000/api/stocks/${id}`, config);
+      await axios.delete(`https://capstone-backend-1jax.onrender.com/api/stocks/${id}`, config);
       setStocks(stocks.filter(stock => stock._id !== id));
 
     } catch (error) {

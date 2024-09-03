@@ -28,7 +28,7 @@ function CreateOrder() {
           },
         };
 
-        const response = await axios.get('http://localhost:5000/api/products', config);
+        const response = await axios.get('https://capstone-backend-1jax.onrender.com/api/products', config);
         setProducts(response.data);
 
       } catch (error) {
@@ -56,7 +56,7 @@ function CreateOrder() {
       };
 
       const orderData = { product, quantity, supplier, orderStatus, deliveryDate };
-      await axios.post('http://localhost:5000/api/orders', orderData, config);
+      await axios.post('https://capstone-backend-1jax.onrender.com/api/orders', orderData, config);
 
       navigate('/dashboard/orders');
 

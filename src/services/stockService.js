@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/stocks';
+const API_URL = 'https://capstone-backend-1jax.onrender.com/api/stocks';
 
 export const getStocks = async () => {
   return await axios.get(API_URL);

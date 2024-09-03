@@ -29,7 +29,7 @@ function EditOrder() {
           },
         };
 
-        const orderResponse = await axios.get(`http://localhost:5000/api/orders/${id}`, config);
+        const orderResponse = await axios.get(`https://capstone-backend-1jax.onrender.com/api/orders/${id}`, config);
         const order = orderResponse.data;
 
         setProduct(order.product || '');
@@ -38,7 +38,7 @@ function EditOrder() {
         setOrderStatus(order.orderStatus);
         setDeliveryDate(order.deliveryDate ? order.deliveryDate.split('T')[0] : '');
 
-        const productResponse = await axios.get('http://localhost:5000/api/products', config);
+        const productResponse = await axios.get('https://capstone-backend-1jax.onrender.com/api/products', config);
         setProducts(productResponse.data);
 
       } catch (error) {
@@ -66,7 +66,7 @@ function EditOrder() {
       };
 
       const orderData = { product, quantity, supplier, orderStatus, deliveryDate };
-      await axios.put(`http://localhost:5000/api/orders/${id}`, orderData, config);
+      await axios.put(`https://capstone-backend-1jax.onrender.com/api/orders/${id}`, orderData, config);
 
       navigate('/dashboard/orders');
 

@@ -23,7 +23,7 @@ function Reports() {
           },
         };
 
-        const response = await axios.get('http://localhost:5000/api/reports/generate', config);
+        const response = await axios.get('https://capstone-backend-1jax.onrender.com/api/reports/generate', config);
         setReport(response.data);
         setLoading(false);
       } catch (err) {

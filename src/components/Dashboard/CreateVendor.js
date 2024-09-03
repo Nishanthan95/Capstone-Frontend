@@ -29,7 +29,7 @@ function CreateVendor() {
       };
 
       const vendorData = { name, contactNumber, email, address };
-      await axios.post('http://localhost:5000/api/vendors', vendorData, config);
+      await axios.post('https://capstone-backend-1jax.onrender.com/api/vendors', vendorData, config);
 
       console.log('Vendor created successfully.');
       navigate('/dashboard/vendors');

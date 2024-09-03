@@ -26,7 +26,7 @@ function EditStock() {
           },
         };
 
-        const response = await axios.get(`http://localhost:5000/api/stocks/${id}`, config);
+        const response = await axios.get(`https://capstone-backend-1jax.onrender.com/api/stocks/${id}`, config);
         console.log('Fetched stock:', response.data);
 
         const stock = response.data;
@@ -60,7 +60,7 @@ function EditStock() {
       };
 
       const stockData = { name, description, quantity };
-      await axios.put(`http://localhost:5000/api/stocks/${id}`, stockData, config);
+      await axios.put(`https://capstone-backend-1jax.onrender.com/api/stocks/${id}`, stockData, config);
 
       console.log('Stock updated successfully.');
       navigate('/dashboard/stocks');

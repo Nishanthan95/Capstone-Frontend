@@ -27,7 +27,7 @@ function EditProduct() {
           },
         };
 
-        const response = await axios.get(`http://localhost:5000/api/products/${id}`, config);
+        const response = await axios.get(`https://capstone-backend-1jax.onrender.com/api/products/${id}`, config);
         const product = response.data;
 
         setName(product.name);
@@ -61,7 +61,7 @@ function EditProduct() {
       };
 
       const productData = { name, description, price, quantity };
-      await axios.put(`http://localhost:5000/api/products/${id}`, productData, config);
+      await axios.put(`https://capstone-backend-1jax.onrender.com/api/products/${id}`, productData, config);
 
       console.log('Product updated successfully.');
       navigate('/dashboard/products');

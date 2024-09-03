@@ -3,7 +3,7 @@
 
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/orders';
+const API_URL = 'https://capstone-backend-1jax.onrender.com/api/orders';
 
 export const getOrders = async () => {
   return await axios.get(API_URL);

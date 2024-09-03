@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
     const token = localStorage.getItem('token');
 
     if (token) {
-      axios.get('http://localhost:5000/api/auth', {
+      axios.get('https://capstone-backend-1jax.onrender.com/api/auth', {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then(response => {
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://capstone-backend-1jax.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
       setUser(response.data.user);
       // console.log('Navigating to /dashboard');
@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (username, email, password) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', { username, email, password });
+      const response = await axios.post('https://capstone-backend-1jax.onrender.com/api/auth/register', { username, email, password });
       localStorage.setItem('token', response.data.token);
       setUser(response.data.user);
       navigate('/dashboard');

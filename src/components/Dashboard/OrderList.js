@@ -24,7 +24,7 @@ function OrderList() {
           },
         };
 
-        const response = await axios.get('http://localhost:5000/api/orders', config);
+        const response = await axios.get('https://capstone-backend-1jax.onrender.com/api/orders', config);
         setOrders(response.data);
 
       } catch (error) {
@@ -50,7 +50,7 @@ function OrderList() {
         },
       };
 
-      await axios.delete(`http://localhost:5000/api/orders/${id}`, config);
+      await axios.delete(`https://capstone-backend-1jax.onrender.com/api/orders/${id}`, config);
       setOrders(orders.filter(order => order._id !== id));
 
     } catch (error) {

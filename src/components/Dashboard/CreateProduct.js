@@ -29,7 +29,7 @@ function CreateProduct() {
       };
 
       const productData = { name, description, price, quantity };
-      const response = await axios.post('http://localhost:5000/api/products', productData, config);
+      const response = await axios.post('https://capstone-backend-1jax.onrender.com/api/products', productData, config);
 
       console.log('Product created:', response.data);
       navigate('/dashboard/products');

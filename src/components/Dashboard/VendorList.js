@@ -23,7 +23,7 @@ function VendorList() {
           },
         };
 
-        const response = await axios.get('http://localhost:5000/api/vendors', config);
+        const response = await axios.get('https://capstone-backend-1jax.onrender.com/api/vendors', config);
         setVendors(response.data);
 
       } catch (error) {
@@ -50,7 +50,7 @@ function VendorList() {
         },
       };
 
-      await axios.delete(`http://localhost:5000/api/vendors/${id}`, config);
+      await axios.delete(`https://capstone-backend-1jax.onrender.com/api/vendors/${id}`, config);
       setVendors(vendors.filter(vendor => vendor._id !== id));
 
     } catch (error) {
